@@ -1,0 +1,12 @@
+.focus-dimmer-sentence {
+  transition: opacity 0.2s ease;
+}
+
+.focus-dimmer-sentence.dimmed {
+  opacity: 0.3;
+}
+
+.focus-dimmer-sentence.highlighted {
+  background-color: rgba(59, 130, 246, 0.1);
+  opacity: 1;
+}

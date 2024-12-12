@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Dimmer",
+  "version": "1.0",
+  "description": "Dims surrounding text while highlighting the sentence you're focusing on",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16-off.png",
+      "48": "icons/icon48-off.png",
+      "128": "icons/icon128-off.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16-off.png",
+    "48": "icons/icon48-off.png",
+    "128": "icons/icon128-off.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
